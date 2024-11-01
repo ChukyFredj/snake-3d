@@ -1,5 +1,4 @@
-import React, { useRef, useState, useEffect, useMemo } from 'react';
-import { BufferGeometry, Material, Mesh, Object3DEventMap, Vector3 } from 'three';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 
@@ -14,25 +13,26 @@ interface SnakeSegmentProps {
 
 
 // Add the following import for the type declaration
-import { MutableRefObject } from 'react';
-
 interface SnakeSegmentProps {
   position: { x: number; y: number; z: number };
   color: string;
 }
 
 const SnakeSegment: React.FC<SnakeSegmentProps> = ({ position, color }) => {
-  const meshRef = useRef<Mesh<BufferGeometry, Material | Material[], Object3DEventMap>>(null);
-  const vector3Position = useMemo(() => new Vector3(position.x, position.y, position.z), [position.x, position.y, position.z]);
+
+  const vector3Position = useMemo(() => {
+    return [position.x, position.y, position.z] as const;
+  }, [position.x, position.y, position.z]);
 
   return (
-    <mesh position={vector3Position} ref={meshRef as MutableRefObject<Mesh<BufferGeometry, Material | Material[], Object3DEventMap>>}>
+    <mesh
+      position={vector3Position}
+    >
       <boxGeometry args={[1, 1, 1]} />
       <meshStandardMaterial color={color} />
     </mesh>
   );
 };
-
 
 // Main Snake Game Component
 const Snake3DGame = () => {

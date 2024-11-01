@@ -12,8 +12,11 @@ importers:
         specifier: ^9.115.0
         version: 9.115.0(@react-three/fiber@8.17.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.170.0))(@types/react@18.3.12)(@types/three@0.169.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.170.0)
       '@react-three/fiber':
-        specifier: ^8.17.10
+        specifier: 8.17.10
         version: 8.17.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.170.0)
+      '@types/three':
+        specifier: 0.169.0
+        version: 0.169.0
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -21,27 +24,24 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
       three:
-        specifier: ^0.170.0
+        specifier: 0.170.0
         version: 0.170.0
     devDependencies:
       '@eslint/js':
         specifier: ^9.13.0
         version: 9.13.0
       '@types/node':
-        specifier: ^22.8.5
-        version: 22.8.5
+        specifier: ^22.8.6
+        version: 22.8.6
       '@types/react':
         specifier: ^18.3.12
         version: 18.3.12
       '@types/react-dom':
         specifier: ^18.3.1
         version: 18.3.1
-      '@types/three':
-        specifier: ^0.169.0
-        version: 0.169.0
       '@vitejs/plugin-react-swc':
-        specifier: ^3.5.0
-        version: 3.7.1(vite@5.4.10(@types/node@22.8.5))
+        specifier: ^3.7.1
+        version: 3.7.1(vite@5.4.10(@types/node@22.8.6))
       eslint:
         specifier: ^9.13.0
         version: 9.13.0
@@ -55,14 +55,14 @@ importers:
         specifier: ^15.11.0
         version: 15.11.0
       typescript:
-        specifier: ~5.6.2
+        specifier: ~5.6.3
         version: 5.6.3
       typescript-eslint:
-        specifier: ^8.11.0
+        specifier: ^8.12.2
         version: 8.12.2(eslint@9.13.0)(typescript@5.6.3)
       vite:
         specifier: ^5.4.10
-        version: 5.4.10(@types/node@22.8.5)
+        version: 5.4.10(@types/node@22.8.6)
 
 packages:
 
@@ -522,8 +522,8 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
-  '@types/node@22.8.5':
-    resolution: {integrity: sha512-5iYk6AMPtsMbkZqCO1UGF9W5L38twq11S2pYWkybGHH2ogPUvXWNlQqJBzuEZWKj/WRH+QTeiv6ySWqJtvIEgA==}
+  '@types/node@22.8.6':
+    resolution: {integrity: sha512-tosuJYKrIqjQIlVCM4PEGxOmyg3FCPa/fViuJChnGeEIhjA46oy8FMVoF9su1/v8PNs2a8Q0iFNyOx0uOF91nw==}
 
   '@types/offscreencanvas@2019.7.3':
     resolution: {integrity: sha512-ieXiYmgSRXUDeOntE1InxjWyvEelZGP63M+cGuquuRLuIKKT1osnkXjxev9B7d1nXSug5vpunx+gNlbVxMlC9A==}
@@ -1630,7 +1630,7 @@ snapshots:
 
   '@types/json-schema@7.0.15': {}
 
-  '@types/node@22.8.5':
+  '@types/node@22.8.6':
     dependencies:
       undici-types: 6.19.8
 
@@ -1764,10 +1764,10 @@ snapshots:
       '@use-gesture/core': 10.3.1
       react: 18.3.1
 
-  '@vitejs/plugin-react-swc@3.7.1(vite@5.4.10(@types/node@22.8.5))':
+  '@vitejs/plugin-react-swc@3.7.1(vite@5.4.10(@types/node@22.8.6))':
     dependencies:
       '@swc/core': 1.7.42
-      vite: 5.4.10(@types/node@22.8.5)
+      vite: 5.4.10(@types/node@22.8.6)
     transitivePeerDependencies:
       - '@swc/helpers'
 
@@ -2356,13 +2356,13 @@ snapshots:
 
   uuid@9.0.1: {}
 
-  vite@5.4.10(@types/node@22.8.5):
+  vite@5.4.10(@types/node@22.8.6):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.47
       rollup: 4.24.3
     optionalDependencies:
-      '@types/node': 22.8.5
+      '@types/node': 22.8.6
       fsevents: 2.3.3
 
   webgl-constants@1.1.1: {}
